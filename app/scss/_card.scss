@@ -1,0 +1,173 @@
+.card {
+  background-color: white;
+  @include breakpoint-up(large) {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  //margin-top: 39%;
+  margin-top: calc(7.5rem + 14.5vw);
+  margin-bottom: 3rem;
+  margin-left: 5.8%;
+  margin-right: 5.8%;
+  border-radius: 1rem;
+  padding-top: 0px;
+
+  //swapped image of woman and background from main section to :after for desktop design
+
+  &__hero {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 1.85rem;
+    left: 7%;
+    right: 10%;
+    height: calc(10rem + 29vw);
+    background-image: url(../../images/illustration-woman-online-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 2;
+    @include breakpoint-up(large) {
+      position: static;
+      order: 1;
+      flex: 1 1 0;
+      align-self: flex-start;
+      height: 42rem;
+      //height: 70rem;
+      background-image: url(../../images/bg-pattern-desktop.svg);
+      background-position: bottom -5rem right 5rem;
+      background-size: 180%;
+    }
+
+    &::before {
+      @include breakpoint-up(large) {
+        //should be absolute position
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+        top: 35%;
+        right: 8rem;
+        content: "";
+        width: 180px;
+        height: 180px;
+        background-image: url(../../images/illustration-box-desktop.svg);
+        background-size: cover;
+        z-index: 20;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      margin: auto;
+      top: 7vw;
+      left: 4vw;
+      bottom: 0;
+      right: 0;
+      width: calc(12rem + 32vw);
+      height: calc(10rem + 29vw);
+      background-image: url(../../images/bg-pattern-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: contain;
+      z-index: 1;
+      @include breakpoint-up(large) {
+        content: "";
+        position: relative;
+        margin: 0;
+        top: -10rem;
+        left: 0;
+        overflow: hidden;
+        height: 28rem;
+        width: 32rem;
+        background-image: url(../../images/illustration-woman-online-desktop.svg);
+        background-size: cover;
+        background-position: top right;
+      }
+    }
+  }
+  .container {
+    @include breakpoint-up(large) {
+      order: 2;
+      flex: 1 1 0;
+      padding: 2.33rem 2.31rem;
+      padding-top: 3.6rem;
+      margin: 0px;
+    }
+    display: block;
+    //top right bottom left
+    padding: calc(9rem + 14.5vw) 2.33rem 2.31rem 2.33rem;
+    hr {
+      border: none;
+      border-top: 1px solid $lightGrayishBlue;
+    }
+    h1 {
+      color: $veryDarkGrayiBlue;
+      font-family: $font-family;
+      font-weight: $font-weight-bold;
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 0 0 0 0;
+      margin-bottom: 2rem;
+    }
+    dl {
+      .question {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "question arrow"
+          "answer .";
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        .arrow {
+          grid-area: arrow;
+          width: 1rem;
+          height: 1rem;
+          background-image: url(../../images/icon-arrow-down.svg);
+          background-repeat: no-repeat;
+          background-position: top right;
+          transition: all 500ms ease-in-out;
+        }
+        dt {
+          grid-area: question;
+        }
+        dd {
+          grid-area: answer;
+          margin: 0;
+          padding: 0;
+        }
+        //if question is open
+        &.open {
+          .arrow {
+            transform: rotate(180deg);
+          }
+          dt {
+            font-weight: $font-weight-bold;
+            margin-bottom: 1.5rem;
+          }
+        }
+        &.closed {
+          dt {
+            &:hover {
+              color: $softRed;
+            }
+          }
+          dd {
+            position: absolute;
+            left: -999em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin-left: 0;
+  margin-right: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/*resets*/
+html {
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(to bottom, #af67e9, #6565e7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #4a4b5e;
+  min-height: 90vh;
+}
+
+.attribution {
+  display: none;
+}
+
+.card {
+  background-color: white;
+  margin-top: calc(7.5rem + 14.5vw);
+  margin-bottom: 3rem;
+  margin-left: 5.8%;
+  margin-right: 5.8%;
+  border-radius: 1rem;
+  padding-top: 0px;
+}
+
+@media (min-width: 1034px) {
+  .card {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.card__hero {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 1.85rem;
+  left: 7%;
+  right: 10%;
+  height: calc(10rem + 29vw);
+  background-image: url(../../images/illustration-woman-online-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 2;
+}
+
+@media (min-width: 1034px) {
+  .card__hero {
+    position: static;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    height: 42rem;
+    background-image: url(../../images/bg-pattern-desktop.svg);
+    background-position: bottom -5rem right 5rem;
+    background-size: 180%;
+  }
+}
+
+@media (min-width: 1034px) {
+  .card__hero::before {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    top: 35%;
+    right: 8rem;
+    content: "";
+    width: 180px;
+    height: 180px;
+    background-image: url(../../images/illustration-box-desktop.svg);
+    background-size: cover;
+    z-index: 20;
+  }
+}
+
+.card__hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 7vw;
+  left: 4vw;
+  bottom: 0;
+  right: 0;
+  width: calc(12rem + 32vw);
+  height: calc(10rem + 29vw);
+  background-image: url(../../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+  z-index: 1;
+}
+
+@media (min-width: 1034px) {
+  .card__hero::after {
+    content: "";
+    position: relative;
+    margin: 0;
+    top: -10rem;
+    left: 0;
+    overflow: hidden;
+    height: 28rem;
+    width: 32rem;
+    background-image: url(../../images/illustration-woman-online-desktop.svg);
+    background-size: cover;
+    background-position: top right;
+  }
+}
+
+.card .container {
+  display: block;
+  padding: calc(9rem + 14.5vw) 2.33rem 2.31rem 2.33rem;
+}
+
+@media (min-width: 1034px) {
+  .card .container {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    padding: 2.33rem 2.31rem;
+    padding-top: 3.6rem;
+    margin: 0px;
+  }
+}
+
+.card .container hr {
+  border: none;
+  border-top: 1px solid #e7e7e9;
+}
+
+.card .container h1 {
+  color: #4a4b5e;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 0 0 0;
+  margin-bottom: 2rem;
+}
+
+.card .container dl .question {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "question arrow" "answer .";
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card .container dl .question .arrow {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: arrow;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.card .container dl .question dt {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: question;
+}
+
+.card .container dl .question dd {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: answer;
+  margin: 0;
+  padding: 0;
+}
+
+.card .container dl .question.open .arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.card .container dl .question.open dt {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.card .container dl .question.closed dt:hover {
+  color: #f47c57;
+}
+
+.card .container dl .question.closed dd {
+  position: absolute;
+  left: -999em;
+}
+/*# sourceMappingURL=style.css.map */

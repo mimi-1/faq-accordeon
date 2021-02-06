@@ -1,0 +1,47 @@
+//Layout
+
+//The designs were created to the following widths:
+
+$mobile: 375px;
+$desktop: 1440px;
+
+// Colors
+
+// Primary
+
+// Text
+
+$darkBlue: hsl(238, 29%, 16%);
+$softRed: hsl(14, 88%, 65%);
+
+//Gradient
+
+//Background gradient:
+
+$softViolet: hsl(273, 75%, 66%);
+$softBlue: hsl(240, 73%, 65%);
+
+//Neutral
+$gradient: linear-gradient(to bottom, $softViolet, $softBlue);
+//Text
+
+$veryDarkGrayiBlue: hsl(237, 12%, 33%);
+$darkGrayishBSlue: hsl(240, 6%, 50%);
+
+//Dividers
+
+$lightGrayishBlue: hsl(240, 5%, 91%);
+
+//Typography
+
+// - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+// - Weights: 400, 700
+$font-family: "Kumbh Sans", sans-serif;
+$font-basic: 12px;
+$font-reg: 1rem;
+$font-weight-bold: 700;
+$font-weight-reg: 400;
+
+// $font-small: 0.875rem;
+// $font-xlarge: 3.25rem;
+// $font-large: 1.2rem;
