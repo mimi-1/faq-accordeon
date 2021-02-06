@@ -127,8 +127,10 @@
         grid-template-areas:
           "question arrow"
           "answer .";
-        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
         margin-top: 1.5rem;
+        border-bottom: solid 1px $lightGrayishBlue;
+
         .arrow {
           grid-area: arrow;
           width: 1rem;
