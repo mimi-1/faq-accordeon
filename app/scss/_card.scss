@@ -121,15 +121,15 @@
     }
     dl {
       .question {
-        display: grid;
-        grid-template-columns: 80% 20%;
-        grid-template-rows: auto;
-        grid-template-areas:
-          "question arrow"
-          "answer .";
         padding-bottom: 1.5rem;
         margin-top: 1.5rem;
         border-bottom: solid 1px $lightGrayishBlue;
+
+        dt {
+          display: grid;
+          grid-template-columns: 80% 20%;
+          grid-template-areas: "question arrow";
+        }
 
         .arrow {
           grid-area: arrow;
@@ -140,11 +140,9 @@
           background-position: top right;
           transition: all 500ms ease-in-out;
         }
-        dt {
-          grid-area: question;
-        }
+
         dd {
-          grid-area: answer;
+          width: 78%;
           margin: 0;
           padding: 0;
         }
